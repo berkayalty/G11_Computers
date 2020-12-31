@@ -41,6 +41,7 @@ class DisplayFragment(var computer: Computer) : Fragment(){
             alertDialog.setTitle("Delete!").setMessage("Do you really want to delete ${this.computer.brand}")
                 .setPositiveButton(R.string.yes){ dialogInterface: DialogInterface, i: Int ->
                     (activity as MainActivity).deleteComputer(this.computer)
+                    (activity as MainActivity).onBackPressed()
                 }.setNegativeButton(R.string.no,null).show()
         }
 

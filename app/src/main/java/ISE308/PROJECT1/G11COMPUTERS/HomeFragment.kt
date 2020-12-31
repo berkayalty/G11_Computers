@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    //Declare Recycler view adapter for computers here
+    private lateinit var computerAdapter: ComputerAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
-        //call recyclerview adapter's constructor
+        computerAdapter = ComputerAdapter(context!!,activity!!,(activity as MainActivity).computersList)
         val linearLayoutManager = LinearLayoutManager(context)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = linearLayoutManager
