@@ -65,6 +65,4 @@ class MainActivity : AppCompatActivity(){
         jsonSerializer.save(computersList)
     }
 
-
-
 }

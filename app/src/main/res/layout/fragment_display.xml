@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DisplayFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/displayEditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin20"
+                android:text="@string/edit"
+                />
+
+            <Button
+                android:id="@+id/displayDeleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin20"
+                android:text="@string/delete"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brand"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/model"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/model_year"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayModelYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/processor"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayProcessor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ram_size"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayRamSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_size_inc"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayScreenSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/graphic_card"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayGraphicCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage"
+            android:textSize="@dimen/titleTextSize"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"/>
+        <TextView
+            android:id="@+id/displayStorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginBottom="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

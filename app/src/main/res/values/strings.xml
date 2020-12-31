@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">G11_Computers</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="brand">Brand</string>
+    <string name="model">Model</string>
+    <string name="model_year">Model Year</string>
+    <string name="processor">Processor</string>
+    <string name="ram_size">Ram Size</string>
+    <string name="screen_size_inc">Screen Size(Inc)</string>
+    <string name="graphic_card">Graphic Card</string>
+    <string name="storage">Storage</string>
 </resources>
