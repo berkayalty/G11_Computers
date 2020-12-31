@@ -20,7 +20,7 @@ class HomeFragment : Fragment() {
         val linearLayoutManager = LinearLayoutManager(context)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = linearLayoutManager
-        //recyclerView.adapter=
+        recyclerView.adapter = computerAdapter
         return view;
     }
 }
