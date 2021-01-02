@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddEditFragment">
+
+    <TextView
+        android:id="@+id/fragmentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_computer"
+        android:textSize="@dimen/titleTextSize"
+        android:layout_marginTop="@dimen/margin30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/brandTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin30"
+        android:text="@string/brand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentTitle"/>
+
+    <EditText
+        android:id="@+id/brandEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_brand"
+        app:layout_constraintEnd_toEndOf="@+id/guideline45"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/brandTextView"
+        app:layout_constraintTop_toBottomOf="@+id/brandTextView"/>
+
+    <TextView
+        android:id="@+id/modelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin30"
+        android:text="@string/model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/brandEditText" />
+
+    <EditText
+        android:id="@+id/modelEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_model"
+        app:layout_constraintEnd_toEndOf="@+id/guideline45"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/modelYearTextView"
+        app:layout_constraintTop_toBottomOf="@+id/modelTextView" />
+
+    <TextView
+        android:id="@+id/modelYearTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin30"
+        android:text="@string/model_year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/modelEditText" />
+
+    <EditText
+        android:id="@+id/modelYearEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_model_year"
+        app:layout_constraintEnd_toEndOf="@+id/guideline45"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/modelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/modelYearTextView"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/processorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/processor"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline45"
+        app:layout_constraintTop_toBottomOf="@id/modelYearEditText"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="@dimen/margin30"/>
+
+    <EditText
+        android:id="@+id/processorEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_processor"
+        app:layout_constraintEnd_toEndOf="@+id/guideline45"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/processorTextView"/>
+
+    <TextView
+        android:id="@+id/ramSizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guideline9"
+        app:layout_constraintTop_toTopOf="@id/brandTextView"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="@string/ram_size"/>
+
+    <EditText
+        android:id="@+id/ramSizeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_ram_size"
+        app:layout_constraintEnd_toEndOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/ramSizeTextView"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/screenSizeIncTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guideline9"
+        app:layout_constraintTop_toTopOf="@id/modelTextView"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="@string/screen_size_inc"/>
+
+    <EditText
+        android:id="@+id/screenSizeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_screen_size"
+        app:layout_constraintEnd_toEndOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/screenSizeIncTextView"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/graphicCardTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guideline9"
+        app:layout_constraintTop_toTopOf="@id/modelYearTextView"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="@string/graphic_card"/>
+
+    <EditText
+        android:id="@+id/graphicCardEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_graphic_card"
+        app:layout_constraintEnd_toEndOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/graphicCardTextView" />
+
+    <TextView
+        android:id="@+id/storageCapacityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guideline9"
+        app:layout_constraintTop_toTopOf="@id/processorTextView"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="@string/storage"/>
+
+    <EditText
+        android:id="@+id/storageCapacityEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_storage"
+        app:layout_constraintEnd_toEndOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/storageCapacityTextView"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline9"
+        app:layout_constraintTop_toBottomOf="@id/processorEditText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/add"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
