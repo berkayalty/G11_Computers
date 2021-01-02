@@ -1,9 +1,13 @@
 package ise308.project1.g11computers
+import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 import java.sql.Timestamp
 
 class Computer{
+    companion object{
+        const val TAG = "Computer"
+    }
     @Throws(JSONException::class)
     constructor(jsonObject: JSONObject){
         ID= jsonObject.getLong("ID")
@@ -15,6 +19,7 @@ class Computer{
         screenSizeInc=jsonObject.getDouble("screenSizeInc")
         graphicCard=jsonObject.getString("graphicCard")
         storageCapacity=jsonObject.getInt("storageCapacity")
+
     }
     constructor(
         brand: String?,
@@ -35,6 +40,7 @@ class Computer{
         this.screenSizeInc = screenSizeInc
         this.graphicCard = graphicCard
         this.storageCapacity = storageCapacity
+        Log.i(TAG, ":${this.brand} is created.")
     }
     constructor()
 

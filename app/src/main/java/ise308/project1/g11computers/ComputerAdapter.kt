@@ -2,6 +2,7 @@ package ise308.project1.g11computers
 
 import android.app.Activity
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ComputerAdapter(var context: Context, var activity: Activity, var computerList : ArrayList<Computer>) : RecyclerView.Adapter<ComputerAdapter.ViewHolder>() {
+    companion object{
+        const val TAG = "ComputerAdapter"
+    }
     private val inflater: LayoutInflater
     init {
         inflater = LayoutInflater.from(this.context)
@@ -46,6 +50,8 @@ class ComputerAdapter(var context: Context, var activity: Activity, var computer
             brandTextView.text = computer.brand
             modelTextView.text = computer.model
             modelYearTextView.text = computer.modelYear.toString()
+
+            Log.i(TAG, "setData: ${computer.brand} Datas are setted.")
         }
 
     }

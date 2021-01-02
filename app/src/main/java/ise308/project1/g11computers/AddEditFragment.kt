@@ -12,6 +12,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class AddEditFragment(var computer : Computer) : Fragment(){
+    companion object{
+        const val TAG = "AddEditFragment"
+    }
     private lateinit var brandEditText : EditText
     private lateinit var modelEditText : EditText
     private lateinit var modelYearEditText : EditText

@@ -3,6 +3,7 @@ package ise308.project1.g11computers
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,11 +13,15 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 class DisplayFragment(var computer: Computer) : Fragment(){
+    companion object{
+        const val TAG = "DisplayFragment"
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View?{
+        Log.i(TAG, "onCreateView: Displayed computer is ${computer.brand}.")
         val view = inflater.inflate(R.layout.fragment_display, container, false)
         view.findViewById<TextView>(R.id.displayBrand).text = computer.brand
         view.findViewById<TextView>(R.id.displayModel).text = computer.model

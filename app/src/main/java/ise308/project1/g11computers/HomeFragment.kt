@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
+    companion object{
+        const val TAG = "HomeFragment"
+    }
     private lateinit var recyclerView: RecyclerView
     private lateinit var computerAdapter: ComputerAdapter
 

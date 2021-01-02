@@ -2,11 +2,15 @@ package ise308.project1.g11computers
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.FrameLayout
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity(){
+    companion object{
+        const val TAG = "MainActivity"
+    }
     val JSON_FILE_NAME = "COMPUTERS_JSON"
     private lateinit var fragmentContainer : FrameLayout
     private lateinit var fragmentManager: FragmentManager
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity(){
     }
     //this function called from floating action button and also called from edit button in the 'DisplayFragment'
     fun openAddEditFragment(computer: Computer){
+        Log.i(TAG, "openAddEditFragment: AddEditFragment is opened.")
         val addFragment = AddEditFragment(computer)
         fragmentManager.beginTransaction().setCustomAnimations(R.anim.anim_enter,R.anim.anim_exit)
             .replace(fragmentContainer.id,addFragment,"ADD_FRAGMENT_TAG")
@@ -36,6 +41,7 @@ class MainActivity : AppCompatActivity(){
     }
     //call this function from 'Recycler View Custom Adapter for Computer's View.onClickListener()'
     fun openDisplayFragment(computer : Computer){
+        Log.i(TAG, "openAddEditFragment: AddEditFragment is opened.")
         val displayFragment = DisplayFragment(computer)
         fragmentManager.beginTransaction().setCustomAnimations(R.anim.anim_enter,R.anim.anim_exit)
             .replace(fragmentContainer.id,displayFragment,"DISPLAY_FRAGMENT_TAG")
@@ -46,12 +52,14 @@ class MainActivity : AppCompatActivity(){
     fun addNewComputer(computer:Computer){
         computersList.add(computer)
         jsonSerializer.save(computersList)
+        Log.i(TAG, "addNewComputer: ${computer.brand} is added.")
     }
 
     //call this function from 'DisplayFragment'
     fun deleteComputer(computer:Computer){
         computersList.remove(computer)
         jsonSerializer.save(computersList)
+        Log.i(TAG, "addNewComputer: ${computer.brand} is deleted.")
     }
 
     //call this function from 'DisplayFragment'
@@ -63,6 +71,8 @@ class MainActivity : AppCompatActivity(){
         computersList.removeAt(indexOfChangedComputer)
         computersList.add(indexOfChangedComputer,computer)
         jsonSerializer.save(computersList)
+        Log.i(TAG, "addNewComputer: ${computer.brand} is edited.")
+
     }
 
 }
