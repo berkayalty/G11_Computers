@@ -66,12 +66,12 @@ class AddEditFragment(var computer : Computer) : Fragment(){
     }
     fun addEditTextToList(){
         editTextList.add(brandEditText)
-        editTextList.add(modelEditText)
-        editTextList.add(modelYearEditText)
-        editTextList.add(processorEditText)
         editTextList.add(ramSizeEditText)
+        editTextList.add(modelEditText)
         editTextList.add(screenSizeEditText)
+        editTextList.add(modelYearEditText)
         editTextList.add(graphicCardEditText)
+        editTextList.add(processorEditText)
         editTextList.add(storageCapacityEditText)
     }
     fun checkEditTextsNullAndEditAdd(){
