@@ -32,7 +32,7 @@ class DisplayFragment(var computer: Computer) : Fragment(){
 
         view.findViewById<Button>(R.id.displayEditButton).setOnClickListener {
             it.startAnimation(scaleAnim)
-           //call addEditFragment from there
+            (activity as MainActivity).addNewComputer(computer)
         }
 
         view.findViewById<Button>(R.id.displayDeleteButton).setOnClickListener {
