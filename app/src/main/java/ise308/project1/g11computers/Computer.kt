@@ -8,6 +8,7 @@ class Computer{
     companion object{
         const val TAG = "Computer"
     }
+    // Only used when created from a JSONObject
     @Throws(JSONException::class)
     constructor(jsonObject: JSONObject){
         ID= jsonObject.getLong("ID")

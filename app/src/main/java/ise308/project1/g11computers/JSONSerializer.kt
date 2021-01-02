@@ -9,10 +9,13 @@ import java.io.*
 class JSONSerializer(private val filename: String, private val context: Context) {
     @Throws(IOException::class, JSONException::class)
     fun save(computerList: ArrayList<Computer>) {
+        // Make an array in JSON format
         val jsonArray = JSONArray()
+        // Load it with the computers
         for (computer in computerList) {
             jsonArray.put(computer.convertTOJSON())
         }
+        // Write it to the private disk space of our app
         var writer: Writer? = null
         try{
             val outFile = context.openFileOutput(filename, Context.MODE_PRIVATE)

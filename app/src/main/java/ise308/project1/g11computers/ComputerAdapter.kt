@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
+// Inheriting from the RecyclerView.Adapter class
 class ComputerAdapter(var context: Context, var activity: Activity, var computerList : ArrayList<Computer>) : RecyclerView.Adapter<ComputerAdapter.ViewHolder>() {
     companion object{
         const val TAG = "ComputerAdapter"
@@ -25,7 +25,7 @@ class ComputerAdapter(var context: Context, var activity: Activity, var computer
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.setData(this.computerList.get(position))
     }
-
+    // Supplying the current number of items in List.
     override fun getItemCount(): Int{
         return this.computerList.size
     }
