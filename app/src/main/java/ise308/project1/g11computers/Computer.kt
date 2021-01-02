@@ -1,4 +1,4 @@
-package ISE308.PROJECT1.G11COMPUTERS
+package ise308.project1.g11computers
 import org.json.JSONException
 import org.json.JSONObject
 import java.sql.Timestamp

@@ -1,4 +1,4 @@
-package ISE308.PROJECT1.G11COMPUTERS
+package ise308.project1.g11computers
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
