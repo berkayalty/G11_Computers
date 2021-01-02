@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -35,11 +36,14 @@ class AddEditFragment(var computer : Computer) : Fragment(){
         graphicCardEditText = view.findViewById(R.id.graphicCardEditText)
         storageCapacityEditText = view.findViewById(R.id.storageCapacityEditText)
         button = view.findViewById(R.id.addButton)
+        val scaleAnim = AnimationUtils.loadAnimation(context,R.anim.anim_button)
+        scaleAnim.duration = 700
         addEditTextToList()
         if(!this.computer.brand.isNullOrEmpty()){
             setTextsOfEditTexts()
         }
         button.setOnClickListener {
+            it.startAnimation(scaleAnim)
             checkEditTextsNullAndEditAdd()
         }
 
