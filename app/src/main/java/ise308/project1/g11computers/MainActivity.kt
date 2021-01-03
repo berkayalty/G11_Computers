@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(){
     fun deleteComputer(computer:Computer){
         computersList.remove(computer)
         jsonSerializer.save(computersList)
-        Log.i(TAG, "addNewComputer: ${computer.brand} is deleted.")
+        Log.i(TAG, "deleteComputer: ${computer.brand} is deleted.")
     }
 
     //call this function from 'DisplayFragment'
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(){
         computersList.removeAt(indexOfChangedComputer)
         computersList.add(indexOfChangedComputer,computer)
         jsonSerializer.save(computersList)
-        Log.i(TAG, "addNewComputer: ${computer.brand} is edited.")
+        Log.i(TAG, "editComputer: ${computer.brand} is edited.")
 
     }
 
